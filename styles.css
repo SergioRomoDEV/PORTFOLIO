@@ -5,7 +5,7 @@
   --shadow: 19px 12px 51px 4px rgba(0, 0, 0, 0.48);
   --btnbg: rgb(2, 31, 21);
   --colorsecundario: #2b394d;
-  --bgcolor: #eef0ef;
+  --bgcolor: #fffdff;
 }
 
 * {
@@ -26,7 +26,6 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--bgcolor);
-  color: white;
   font-family: "Lato", sans-serif;
 }
 
@@ -37,6 +36,44 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: "Lato", sans-serif;
+}
+
+/*==================== BOTÓN BASE ====================*/
+/* Estilo 3D basado en Uiverse.io by elijahgummer */
+
+.btn {
+  display: inline-block;
+  font: inherit;
+  background-color: #f0f0f0;
+  border: 0;
+  color: #242424;
+  border-radius: 0.5em;
+  font-size: 1.35rem;
+  padding: 0.375em 1em;
+  font-weight: 600;
+  text-shadow: 0 0.0625em 0 #fff;
+  box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
+    0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
+    0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
+  transition: 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #e6e6e6;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--colorsecundario);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  translate: 0 0.225em;
+  box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
+    0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
+    0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
 }
 
 /*==================== HEADER ====================*/
@@ -50,11 +87,9 @@ header {
   align-items: center;
 }
 
-
 header:has(.cabecera) {
   min-height: 95vh;
   min-height: 95dvh;
-  
 }
 
 /*================= NAV ========================*/
@@ -64,67 +99,12 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 20px;
   margin: 30px;
   width: 100%;
   max-width: 100%;
   padding: 0 10px;
   text-align: center;
-}
-
-.btn-nav {
-  position: relative;
-  overflow: hidden;
-  font-size: clamp(10px, 3vw, 14px);
-  padding: 0.6em 1em;
-  letter-spacing: 0.04em;
-  font-family: inherit;
-  line-height: 1.4em;
-  border-radius: 0.6em;
-  border: 2px solid var(--colorsecundario);
-  background: linear-gradient(
-    to right,
-    rgba(27, 253, 156, 0.1) 1%,
-    transparent 40%,
-    transparent 60%,
-    rgba(27, 253, 156, 0.1) 100%
-  );
-  color: var(--colorsecundario);
-  box-shadow:
-    inset 0 0 10px rgba(27, 253, 156, 0.4),
-    0 0 9px 3px rgba(27, 253, 156, 0.1);
-  text-decoration: none;
-  white-space: nowrap;
-  flex: 0 1 auto;
-  transition: all 0.3s;
-}
-
-.btn-nav:hover {
-  color: #82ffc9;
-  box-shadow:
-    inset 0 0 10px rgba(27, 253, 156, 0.6),
-    0 0 9px 3px rgba(27, 253, 156, 0.2);
-}
-
-.btn-nav:before {
-  content: "";
-  position: absolute;
-  left: -4em;
-  top: 0;
-  width: 4em;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 1%,
-    rgba(27, 253, 156, 0.1) 40%,
-    rgba(27, 253, 156, 0.1) 60%,
-    transparent 100%
-  );
-  transition: transform 0.4s ease-in-out;
-}
-
-.btn-nav:hover:before {
-  transform: translateX(15em);
 }
 
 /*====================== CABECERA ======================*/
@@ -135,7 +115,6 @@ nav {
   align-items: center;
   width: 100%;
   max-width: 700px;
-  height: auto;
   margin: auto;
   padding: 10px;
   border-radius: var(--bordes);
@@ -152,42 +131,23 @@ nav {
   font-size: 12px;
   padding: 10px;
   max-width: 400px;
-  height: auto;
   border-radius: var(--bordes);
 }
 
 .description h2 {
-  color: darkkhaki;
+  color: #7a6a1f; /* khaki oscuro: darkkhaki no se leía bien sobre blanco */
 }
 
 .btn-cv {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 0.6em 1.5em;
-  font-size: 14px;
-  font-family: inherit;
-  letter-spacing: 0.06em;
-  border-radius: 0.6em;
-  border: 2px solid var(--colorsecundario);
-  background: rgba(182, 227, 73, 0.1);
-  color: var(--colorsecundario);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn-cv:hover {
-  background: rgba(182, 227, 73, 0.25);
-  color: #82ffc9;
+  font-size: 1.15rem;
+  margin-top: 20px;
 }
 
 /*================ CARRUSEL ====================*/
 
 .tecnologias {
   width: 80%;
-  height: auto;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   border-top: 1px solid var(--colorsecundario);
   border-bottom: 1px solid var(--colorsecundario);
   overflow: hidden;
@@ -209,7 +169,14 @@ nav {
 
 @keyframes cintaMovimiento {
   from { transform: translateX(0); }
-  to { transform: translateX(calc(-25% - 25px)); }
+  to { transform: translateX(calc(-25% - 15px)); }
+}
+
+/* Quien tenga activado "reducir movimiento" en su sistema ve la cinta quieta */
+@media (prefers-reduced-motion: reduce) {
+  .cinta-tecnologias {
+    animation: none;
+  }
 }
 
 /*================= PROYECTOS =======================*/
@@ -241,7 +208,7 @@ nav {
   margin: 20px;
 }
 
-.Project h4 {
+.Project h3 {
   margin: 20px;
 }
 
@@ -252,60 +219,10 @@ nav {
 }
 
 .btn-project {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  font-size: 15px;
-  padding: 0.7em 2.7em;
-  letter-spacing: 0.06em;
-  font-family: inherit;
-  line-height: 1.4em;
-  border-radius: 0.6em;
-  border: 2px solid var(--colorsecundario);
-  background: linear-gradient(
-    to right,
-    rgba(27, 253, 156, 0.1) 1%,
-    transparent 40%,
-    transparent 60%,
-    rgba(27, 253, 156, 0.1) 100%
-  );
-  color: var(--colorsecundario);
-  box-shadow:
-    inset 0 0 10px rgba(27, 253, 156, 0.4),
-    0 0 9px 3px rgba(27, 253, 156, 0.1);
-  text-decoration: none;
-  transition: all 0.3s;
+  font-size: 1.15rem;
 }
 
-.btn-project:hover {
-  color: #82ffc9;
-  box-shadow:
-    inset 0 0 10px rgba(27, 253, 156, 0.6),
-    0 0 9px 3px rgba(27, 253, 156, 0.2);
-}
-
-.btn-project:before {
-  content: "";
-  position: absolute;
-  left: -4em;
-  top: 0;
-  width: 4em;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 1%,
-    rgba(27, 253, 156, 0.1) 40%,
-    rgba(27, 253, 156, 0.1) 60%,
-    transparent 100%
-  );
-  transition: transform 0.4s ease-in-out;
-}
-
-.btn-project:hover:before {
-  transform: translateX(15em);
-}
-
-/*================= SOBRE MI =======================*/
+/*================= SOBRE MÍ =======================*/
 
 .sobremi {
   margin: 20px 0;
@@ -321,26 +238,20 @@ nav {
 
 .contenedorlista {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* en móvil, un párrafo debajo del otro */
   align-items: center;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 700px;
-  color: #2b394d;
+  max-width: 800px;
+  color: var(--colorsecundario);
 }
 
 .contenedorlista p {
   line-height: 1.6;
   text-align: left;
   max-width: 60ch;
-}
-
-.contenedorlista img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: var(--bordes);
-  box-shadow: var(--shadow);
 }
 
 /*============== HABILIDADES BLANDAS ================*/
@@ -359,6 +270,7 @@ nav {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  color: #ececec;
 }
 
 .skill-tag {
@@ -367,7 +279,7 @@ nav {
   border-radius: 20px;
 }
 
-/*============== FORMACION ================*/
+/*============== FORMACIÓN ================*/
 
 .formacion {
   margin: 50px 0;
@@ -387,7 +299,7 @@ nav {
   align-items: center;
   gap: 15px;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 20px;
 }
 
@@ -400,8 +312,8 @@ nav {
   border-radius: var(--bordes);
 }
 
-.formacion-item h4 {
-  color: #2b394d;
+.formacion-item h3 {
+  color: var(--colorsecundario);
   font-family: "Lato", sans-serif;
   font-size: 16px;
   margin-bottom: 5px;
@@ -413,7 +325,7 @@ nav {
   letter-spacing: 0.04em;
 }
 
-/*======================CONTACTO (index.html)========================*/
+/*====================== CONTACTO (index.html) ========================*/
 
 .contacto {
   position: relative;
@@ -427,37 +339,10 @@ nav {
   position: relative;
   z-index: 2;
   font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.contacto > p {
-  position: relative;
-  z-index: 2;
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  font-family: "Lato", sans-serif;
-  color: white;
-}
-
-.btn-contacto {
-  display: inline-block;
   margin: 30px;
-  padding: 20px 40px;
-  font-size: 18px;
-  font-family: "Orbitron", sans-serif;
-  color: black;
-  background-color: var(--colorsecundario);
-  border-radius: var(--bordes);
-  box-shadow: var(--shadow);
-  text-decoration: none;
-  transition: all 0.3s;
 }
 
-.btn-contacto:hover {
-  background-color: #82ffc9;
-}
-
-/*======================FORMULARIO (formulario.html)========================*/
+/*====================== FORMULARIO (formulario.html) ========================*/
 
 .contacto .form {
   position: relative;
@@ -495,10 +380,10 @@ nav {
   padding: 10px;
   border-radius: 6px;
   font-family: "Lato", sans-serif;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
+  background: #ffffff;
+  color: var(--colorsecundario);
   outline: none;
-  border: 2px solid rgba(182, 227, 73, 0.4);
+  border: 2px solid rgba(43, 57, 77, 0.3);
   transition: border-color 0.3s;
 }
 
@@ -530,11 +415,11 @@ nav {
 
 .btn-enviar {
   background-color: var(--colorsecundario);
-  color: black;
+  color: #ffffff;
 }
 
 .btn-enviar:hover {
-  background-color: #82ffc9;
+  background-color: #3d5170;
 }
 
 .btn-borrar {
@@ -543,7 +428,13 @@ nav {
 }
 
 .btn-borrar:hover {
-  background: rgba(182, 227, 73, 0.1);
+  background: rgba(43, 57, 77, 0.08);
+}
+
+.btn-enviar:focus-visible,
+.btn-borrar:focus-visible {
+  outline: 2px solid var(--colorsecundario);
+  outline-offset: 3px;
 }
 
 /*===================== FOOTER =====================*/
@@ -560,45 +451,36 @@ nav {
 footer p {
   margin: 20px;
   font-family: "Lato", sans-serif;
-  color: #2b394d;
+  color: var(--colorsecundario);
 }
 
-
-
-
-
 /*======================================================
-                        TABLET  
+                        TABLET
 ======================================================*/
 @media (min-width: 768px) {
 
-  
   .Project-Container {
     grid-template-columns: 1fr 1fr;
   }
 
-  
   .cabecera {
     flex-direction: row;
     justify-content: center;
     gap: 40px;
   }
 
-  
   .contenedorlista {
     flex-direction: row;
     align-items: flex-start;
     gap: 40px;
   }
 
-  
   .proyectos h2,
   .sobremi h2,
   .formacion h2 {
     font-size: 1.5rem;
   }
 
- 
   .btn-nav {
     font-size: 14px;
     padding: 0.7em 1.4em;
@@ -606,16 +488,15 @@ footer p {
 }
 
 /*======================================================
-                      ESCRITORIO  
+                      ESCRITORIO
 ======================================================*/
 @media (min-width: 1024px) {
 
-  
   .cabecera {
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin-top: 60px;          
+    margin-top: 60px;
   }
 
   .description {
@@ -623,20 +504,19 @@ footer p {
     max-width: 500px;
   }
 
- 
   .btn-nav {
     font-size: 15px;
     padding: 0.8em 1.8em;
   }
-  .proyectos{
+
+  .proyectos {
     margin: 100px;
   }
-  
+
   header:has(.cabecera) {
     min-height: 85vh;
   }
 
-  
   .Project-Container {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
@@ -654,27 +534,23 @@ footer p {
     font-size: 1.8rem;
   }
 
-.sobremi {
-  margin: 80px 0;    
-  text-align: center;
-}
-
+  .sobremi {
+    margin: 80px 0;
+  }
 
   .contacto .form {
-    max-width: 1800px;         
+    max-width: 700px;
     padding: 50px;
   }
 
   .form input,
   .form textarea,
   .form select {
-    padding: 14px;            
+    padding: 14px;
     font-size: 16px;
   }
 
   .contacto .form textarea {
-    min-height: 160px;        
+    min-height: 160px;
   }
-
-
 }
