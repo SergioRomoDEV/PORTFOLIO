@@ -2,10 +2,10 @@
 
 :root {
   --bordes: 12px;
-  --shadow: 4px 4px 30px rgba(65, 188, 106, 0.395);
+  --shadow: 19px 12px 51px 4px rgba(0, 0, 0, 0.48);
   --btnbg: rgb(2, 31, 21);
-  --colorsecundario: #b6e349;
-  --bgcolor: rgb(37, 39, 39);
+  --colorsecundario: #2b394d;
+  --bgcolor: #eef0ef;
 }
 
 * {
@@ -142,15 +142,15 @@ nav {
 }
 
 .profile img {
-  width: clamp(100px, 30vw, 200px);
+  width: 200px;
   height: auto;
-  border-radius: 300px;
+  border-radius: 400px;
 }
 
 .description {
   text-align: center;
   font-size: 12px;
-  padding: 20px;
+  padding: 10px;
   max-width: 400px;
   height: auto;
   border-radius: var(--bordes);
@@ -327,6 +327,7 @@ nav {
   padding: 20px;
   margin: 20px auto;
   max-width: 700px;
+  color: #2b394d;
 }
 
 .contenedorlista p {
@@ -400,7 +401,7 @@ nav {
 }
 
 .formacion-item h4 {
-  color: white;
+  color: #2b394d;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   margin-bottom: 5px;
@@ -559,6 +560,7 @@ nav {
 footer p {
   margin: 20px;
   font-family: "Lato", sans-serif;
+  color: #2b394d;
 }
 
 
